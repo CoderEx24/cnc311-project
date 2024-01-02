@@ -1,0 +1,44 @@
+<CourseEntry>:
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'X'
+        Label:
+            text: root.title_text
+        
+<MasterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 0.1
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Add Course'
+
+            Button:
+                text: 'Drop Course'
+
+            Button:
+                text: 'View Academic Data'
+
+            Button:
+                text: 'View Schedule'
+
+        TextInput:
+            size_hint_y: 0.1
+            id: search
+
+
+        RecycleView:
+            viewclass: 'Label'
+            data: [{'text': f'course{i}'} for i in range(10)]
+            orientation: 'vertical'
+
+            RecycleBoxLayout:
+                orientation: 'vertical'
+                default_size: None, dp(56)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
