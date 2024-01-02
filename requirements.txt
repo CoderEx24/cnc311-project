@@ -1,9 +1,13 @@
 certifi==2023.11.17
+cffi==1.16.0
 charset-normalizer==3.3.2
+cryptography==41.0.7
 docutils==0.20.1
 idna==3.6
 Kivy==2.2.1
 Kivy-Garden==0.1.5
+oracledb==2.0.0
+pycparser==2.21
 Pygments==2.17.2
 requests==2.31.0
 urllib3==2.1.0
