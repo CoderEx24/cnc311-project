@@ -1,4 +1,4 @@
-/// Creating the DB \\\
+-- /// Creating the DB \\\
 
 
 CREATE TABLE Students (

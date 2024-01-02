@@ -1,10 +1,10 @@
-    InstructorID VARCHAR2(10) PRIMARY KEY,
-    First_name VARCHAR2(50) NOT NULL,
-    Last_name VARCHAR2(50) NOT NULL,
-    Email VARCHAR2(100) UNIQUE NOT NULL,
-    Password VARCHAR2(100) NOT NULL,
-    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
-    Role VARCHAR2(50)
+--    InstructorID VARCHAR2(10) PRIMARY KEY,
+--    First_name VARCHAR2(50) NOT NULL,
+--    Last_name VARCHAR2(50) NOT NULL,
+--    Email VARCHAR2(100) UNIQUE NOT NULL,
+--    Password VARCHAR2(100) NOT NULL,
+--    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
+--    Role VARCHAR2(50)
 
 
 

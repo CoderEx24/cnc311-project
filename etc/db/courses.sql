@@ -1,9 +1,9 @@
-    CourseID VARCHAR2(10) PRIMARY KEY,
-    Semester_no NUMBER(1) NOT NULL,
-    Course_name VARCHAR2(100) NOT NULL,
-    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
-    Credits NUMBER CHECK (Credits > 0),
-    InstructorID VARCHAR2(10) REFERENCES Instructors(InstructorID)
+--    CourseID VARCHAR2(10) PRIMARY KEY,
+--    Semester_no NUMBER(1) NOT NULL,
+--    Course_name VARCHAR2(100) NOT NULL,
+--    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
+--    Credits NUMBER CHECK (Credits > 0),
+--    InstructorID VARCHAR2(10) REFERENCES Instructors(InstructorID)
 
 -- Semester 1 Courses
 INSERT INTO Courses VALUES ('LRA101', 1, 'Japanese Culture', NULL, 2, NULL);

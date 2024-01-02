@@ -1,10 +1,10 @@
-    StudentID VARCHAR2(8) PRIMARY KEY,
-    First_name VARCHAR2(50) NOT NULL,
-    Last_name VARCHAR2(50) NOT NULL,
-    Email VARCHAR2(100) UNIQUE NOT NULL,
-    Password VARCHAR2(50) NOT NULL,
-    Major VARCHAR2(3) REFERENCES Departments(DepartmentID),
-    Year NUMBER CHECK (Year > 0 AND Year < 5)
+--    StudentID VARCHAR2(8) PRIMARY KEY,
+--    First_name VARCHAR2(50) NOT NULL,
+--    Last_name VARCHAR2(50) NOT NULL,
+--    Email VARCHAR2(100) UNIQUE NOT NULL,
+--    Password VARCHAR2(50) NOT NULL,
+--    Major VARCHAR2(3) REFERENCES Departments(DepartmentID),
+--    Year NUMBER CHECK (Year > 0 AND Year < 5)
 
 INSERT INTO Students (First_name, Last_name, Email, Password, Major, Year) VALUES ('John', 'Doe', 'john.doe@ejust.edu.eg', 'passstudent', 'CNC', 2);
 INSERT INTO Students (First_name, Last_name, Email, Password, Major, Year) VALUES ('Jane', 'Smith', 'jane.smith@ejust.edu.eg', 'passstudent', 'AID', 1);
