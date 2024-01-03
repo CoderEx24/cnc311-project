@@ -1,10 +1,10 @@
 <CourseEntry>:
-    BoxLayout:
-        orientation: 'horizontal'
-        Button:
-            text: 'X'
-        Label:
-            text: root.title_text
+    orientation: 'horizontal'
+    Label:
+        text: root.title_text
+    Button:
+        size_hint_x: 0.2
+        text: 'Drop'
         
 <MasterScreen>:
     BoxLayout:
@@ -18,9 +18,6 @@
                 text: 'Add Course'
 
             Button:
-                text: 'Drop Course'
-
-            Button:
                 text: 'View Academic Data'
 
             Button:
@@ -32,8 +29,8 @@
 
 
         RecycleView:
-            viewclass: 'Label'
-            data: [{'text': f'course{i}'} for i in range(10)]
+            viewclass: 'CourseEntry'
+            data: [{'title_text': f'course{i}'} for i in range(10)]
             orientation: 'vertical'
 
             RecycleBoxLayout:
