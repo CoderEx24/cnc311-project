@@ -3,7 +3,8 @@ from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.app import App
 from os import path
-from master import *
+from student_dashboard import *
+from course_register import *
 from login import *
 import oracledb
 

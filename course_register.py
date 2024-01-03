@@ -4,11 +4,13 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 from os import path
 
-Builder.load_file(path.join(path.dirname(__file__), 'kv', 'course_catalog.kv'))
+# __all__ = ('CourseRegisterScreen')
 
-class CourseCatalogEntry(BoxLayout):
+Builder.load_file(path.join(path.dirname(__file__), 'kv', 'course_register.kv'))
+
+class CourseRegisterEntry(BoxLayout):
     course_name = StringProperty()
 
-class CourseCatalog(Screen):
+class CourseRegisterScreen(Screen):
     pass
 

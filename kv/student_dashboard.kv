@@ -1,12 +1,12 @@
-<CourseEntry>:
+<RegisteredCourseEntry>:
     orientation: 'horizontal'
     Label:
-        text: root.title_text
+        text: root.course_name
     Button:
         size_hint_x: 0.2
         text: 'Drop'
         
-<MasterScreen>:
+<StudentDashboardScreen>:
     BoxLayout:
         orientation: 'vertical'
 
@@ -16,7 +16,7 @@
 
             Button:
                 text: 'Add Course'
-                on_press: root.manager.transition.direction = 'left'; root.manager.current = 'catalog';
+                on_press: root.manager.transition.direction = 'left'; root.manager.current = 'course_register';
 
             Button:
                 text: 'View Academic Data'
@@ -30,8 +30,8 @@
 
 
         RecycleView:
-            viewclass: 'CourseEntry'
-            data: [{'title_text': f'course{i}'} for i in range(10)]
+            viewclass: 'RegisteredCourseEntry'
+            data: [{'course_name': f'course{i}'} for i in range(10)]
             orientation: 'vertical'
 
             RecycleBoxLayout:

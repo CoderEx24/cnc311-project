@@ -1,4 +1,4 @@
-<CourseCatalogEntry>:
+<CourseRegisterEntry>:
     Label:
         text: root.course_name
 
@@ -6,7 +6,7 @@
         size_hint_x: 0.15
         text: 'Enroll'
 
-<CourseCatalog>:
+<CourseRegisterScreen>:
     BoxLayout:
         orientation: 'vertical'
         
@@ -14,10 +14,10 @@
         Button:
             size_hint_y: 0.09
             text: 'Back'
-            on_press: root.manager.transition.direction = 'right'; root.manager.current = 'master'
+            on_press: root.manager.transition.direction = 'right'; root.manager.current = 'student_dashboard'
 
         RecycleView:
-            viewclass: 'CourseCatalogEntry'
+            viewclass: 'CourseRegisterEntry'
             data: [{'course_name': f'course{i}'} for i in range(10)]
 
             RecycleBoxLayout:
