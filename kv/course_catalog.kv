@@ -1,0 +1,30 @@
+<CourseCatalogEntry>:
+    Label:
+        text: root.course_name
+
+    Button:
+        size_hint_x: 0.15
+        text: 'Enroll'
+
+<CourseCatalog>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        
+        Button:
+            size_hint_y: 0.09
+            text: 'Back'
+            on_press: root.manager.transition.direction = 'right'; root.manager.current = 'master'
+
+        RecycleView:
+            viewclass: 'CourseCatalogEntry'
+            data: [{'course_name': f'course{i}'} for i in range(10)]
+
+            RecycleBoxLayout:
+                orientation: 'vertical'
+                default_size: None, dp(56)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
+                
+         
