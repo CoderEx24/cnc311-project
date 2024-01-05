@@ -1,0 +1,23 @@
+<InstructorDashboardScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Instructor Dashboard'
+            size_hint_y: None
+            height: '48dp'
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            BoxLayout:
+                id: courses_list
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+
+        Button:
+            text: 'Back'
+            size_hint_y: None
+            height: '48dp'
+            on_release: app.root.current = 'login_screen'

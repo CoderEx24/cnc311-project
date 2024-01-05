@@ -1,0 +1,23 @@
+<CourseCatalogScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Course Catalog'
+            size_hint_y: None
+            height: '48dp'
+        
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            BoxLayout:
+                id: course_list
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height  # Adjusts the height based on the content
+
+        Button:
+            text: 'Back'
+            size_hint_y: None
+            height: '48dp'
+            on_release: app.root.current = 'login_screen'
