@@ -16,7 +16,11 @@
         
         BoxLayout:
             orientation: 'horizontal'
+
+            size_hint_y: 0.1
+
             Label:
+                size_hint_x: 0.1
                 text: 'ID: '
             
             TextInput:
@@ -24,6 +28,7 @@
                 multiline: False
             
             Label:
+                size_hint_x: 0.3
                 text: 'Credits: '
             
             TextInput:
@@ -31,21 +36,31 @@
                 multiline: False
 
             Label:
+                size_hint_x: 0.3
                 text: 'Semster: '
             
             TextInput:
                 id: semster
                 multiline: False
-        
+
+
         BoxLayout:
             orientation: 'horizontal'
+
+            size_hint_y: 0.1
             
-            Label: 
+            Label:
+                size_hint_x: 0.35
                 text: 'Course Name: '
 
             TextInput:
                 id: course_name
                 multiline: False
+
+            Button:
+                size_hint_x: 0.12
+                text: 'Add'
+
 
         RecycleView:
             viewclass: 'AffairsCourseEntry'
