@@ -5,7 +5,7 @@ from kivy.app import App
 from os import environ
 from os import path
 import oracledb
-import cx_oracle
+import cx_Oracle
 
 Builder.load_file(path.join(path.dirname(__file__), 'kv', 'login.kv'))
 
@@ -16,8 +16,7 @@ class LoginScreen(Screen):
         password = self.ids['password']
 
         try:
-            App.get_running_app().db_connection = oracledb.connect(user=username, password=password, dsn=environ.get('ORACLE_URL'))
-            instructor_id = self.authenticate(username, password)
+            pass
         except Exception:
             error_msg = self.ids['error_widget']
             error_msg.opacity = 1
