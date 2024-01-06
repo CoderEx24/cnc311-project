@@ -10,7 +10,7 @@
     Button:
         text: 'Delete'
 
-<AffairsDashboard>:
+<AffairsDashboardScreen>:
     BoxLayout:
         orientation: 'vertical'
         
@@ -49,6 +49,11 @@
 
         RecycleView:
             viewclass: 'AffairsCourseEntry'
-            data: [{} for range(10)]
+            data: [{} for _ in range(10)]
 
-
+            RecycleBoxLayout:
+                orientation: 'vertical'
+                default_size: None, dp(56)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height

@@ -54,7 +54,8 @@
                     text: 'Login as Student'
 
                 Button:
-                    on_press: root.login('affair')
+                    on_press:
+                        if root.login('affair'): root.manager.transition.direction = 'left'; root.manager.current = 'affairs_dashboard'
                     text: 'Login as Affair Staff'
 
                 Button:
