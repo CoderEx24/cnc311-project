@@ -33,6 +33,7 @@ class InstructorDashboardScreen(Screen):
                 print("Error fetching courses:", e)
 
     def on_leave(self):
+        pass
 
     def __del__(self):
         if self.db_cursor:

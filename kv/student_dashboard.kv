@@ -7,6 +7,7 @@
         text: 'Drop'
         
 <StudentDashboardScreen>:
+    on_enter: self.populate_data()
     BoxLayout:
         orientation: 'vertical'
 
@@ -31,8 +32,8 @@
 
         RecycleView:
             viewclass: 'RegisteredCourseEntry'
-            data: [{'course_name': f'course{i}'} for i in range(10)]
             orientation: 'vertical'
+            id: courses_list
 
             RecycleBoxLayout:
                 orientation: 'vertical'
