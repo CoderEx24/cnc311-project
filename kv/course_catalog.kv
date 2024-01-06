@@ -1,4 +1,5 @@
 <CourseCatalogScreen>:
+    on_enter: self.load_courses()
     BoxLayout:
         orientation: 'vertical'
         Label:
@@ -20,4 +21,4 @@
             text: 'Back'
             size_hint_y: None
             height: '48dp'
-            on_release: app.root.current = 'login_screen'
+            on_release: self.manager.transition.direction = 'right'; self.manager.current = 'login_screen'
