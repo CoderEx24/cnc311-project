@@ -7,6 +7,7 @@ from login import *
 from course_register import *
 from course_catalog import *
 from student_dashboard import *
+from affairs_dashboard import *
 import cx_Oracle as oracledb
 
 Builder.load_file(path.join(path.dirname(__file__), 'kv', 'main.kv'))
