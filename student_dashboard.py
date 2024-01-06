@@ -17,9 +17,7 @@ class RegisteredCourseEntry(BoxLayout):
 class StudentDashboardScreen(Screen):
     def populate_data(self):
         QUERY = '''
-        SELECT courseid, course_name, 
+        SELECT courseid, course_name FROM  
         '''
         with App.get_running_app().db_connection.cursor() as cur:
-            for row in cursor.execute():
-                pass
-
+            pass

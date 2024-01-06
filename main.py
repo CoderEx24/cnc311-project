@@ -23,13 +23,13 @@ class MainApp(App):
         try: 
             self.db_connection = oracledb.connect(
                     user='guest',
-                    password='',
-                    dsn=environ.get('DB_LINK'),
+                    password='guest',
+                    dsn=environ.get('DB_LINK', 'localhost:1521/xe'),
             )
         except oracledb.DatabaseError as e:
             print(f'[ERROR]: {e}')
-            #import sys
-            #sys.exit(-1)
+            import sys
+            sys.exit(-1)
 
         return MainManager()
 
