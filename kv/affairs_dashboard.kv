@@ -1,0 +1,54 @@
+<AffairsCourseEntry>:
+    orientation: 'horizontal'
+
+    Label:
+        text: root.course_name
+
+    Button:
+        text: 'Modify'
+
+    Button:
+        text: 'Delete'
+
+<AffairsDashboard>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'ID: '
+            
+            TextInput:
+                id: course_id
+                multiline: False
+            
+            Label:
+                text: 'Credits: '
+            
+            TextInput:
+                id: credits
+                multiline: False
+
+            Label:
+                text: 'Semster: '
+            
+            TextInput:
+                id: semster
+                multiline: False
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            
+            Label: 
+                text: 'Course Name: '
+
+            TextInput:
+                id: course_name
+                multiline: False
+
+        RecycleView:
+            viewclass: 'AffairsCourseEntry'
+            data: [{} for range(10)]
+
+
