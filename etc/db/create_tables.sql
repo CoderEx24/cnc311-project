@@ -7,7 +7,7 @@ CREATE TABLE Students (
     Last_name VARCHAR2(50) NOT NULL,
     Email VARCHAR2(100) UNIQUE NOT NULL,
     Password VARCHAR2(50) NOT NULL,
-    Major VARCHAR2(3) REFERENCES Departments(DepartmentID),
+--    Major VARCHAR2(3) REFERENCES Departments(DepartmentID),
     Year NUMBER CHECK (Year > 0 AND Year < 5)
 );
 
@@ -16,8 +16,8 @@ CREATE TABLE Courses (
     CourseID VARCHAR2(6) PRIMARY KEY,
     Semester_no NUMBER(1) NOT NULL,
     Course_name VARCHAR2(100) NOT NULL,
-    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
     Credits NUMBER CHECK (Credits > 0),
+    Department VARCHAR2(10) REFERENCES Departments(DepartmentID),
     InstructorID VARCHAR2(10) REFERENCES Instructors(InstructorID)
 );
 

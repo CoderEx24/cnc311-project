@@ -26,11 +26,11 @@
                 
                 Label:  
                     size_hint_x: 0.35
-                    text: 'Username'
+                    text: 'E-mail'
             
                 TextInput:
                     multiline: False
-                    id: username
+                    id: email
 
             BoxLayout:
                 oritentation: 'horizontal'
@@ -49,6 +49,15 @@
                 oritentation: 'horizontal'
 
                 Button:
-                    on_press: root.login()
-                    text: 'Login'
+                    on_press:
+                        if root.login('student'): root.manager.transition.direction = 'left'; root.manager.current = 'student_dashboard'
+                    text: 'Login as Student'
+
+                Button:
+                    on_press: root.login('affair')
+                    text: 'Login as Affair Staff'
+
+                Button:
+                    on_press: root.login('inst')
+                    text: 'Login as Instructor'
 
